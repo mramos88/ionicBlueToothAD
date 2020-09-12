@@ -7,14 +7,18 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <ion-button (click)="onClick()" expand="block" >
+    Click me
+  </ion-button>
+
+  <div *ngFor="let d of dis">
+    {{d.id}}
+    {{d.address}}
+    {{d.name}}
+    <ion-button (click)="conectar(d.address)" >
+      Conectar
+    </ion-button>
+
   </div>
 </ion-content>
